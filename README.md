@@ -1,1 +1,1 @@
-# ski-ff.com
+# ski-ff
