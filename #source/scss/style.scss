@@ -1,237 +1,129 @@
 // Файл обнуляющих стилей
 @import "nullstyle.scss";
+@import "header.scss";
+@import "responsive.scss";
 
 .wrapper {
   height: 100%;
 }
-.header__area {
-  border-top: solid rgb(86, 84, 84) 1px;
-  border-bottom: solid rgb(86, 84, 84) 1px;
-}
 .container {
   margin: 0px auto;
-  padding: 0px 10px;
+  padding: 0px 10px 0 10px;
   max-width: 1180px;
 }
-/*Основные стили*/
-.menu {
-  display: flex;
+img {
+  height: auto;
+  max-width: 100%;
+}
+//body index
+//Welcome Area Start
+
+.welcome__area {
   position: relative;
-  justify-content: space-between;
-  height: 80px;
+  z-index: 1;
+  height: 300px;
+}
+
+.bg__img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 10px;
+}
+.h__100 {
+  height: 100%;
   align-items: center;
 }
-/**/
-.header__burger {
-  display: none;
+
+.hero__content {
+  h6 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  h2 {
+    font-size: 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    margin-bottom: 50px;
+  }
 }
-.header__logo {
-  flex: 0 0 100px;
-  position: relative;
-}
-.header__logo img {
+.col__12 {
+  flex: 0 0 100%;
   max-width: 100%;
-  display: block;
-}
-.favourite__area {
-  display: flex;
-  position: relative;
-  justify-content: center;
-}
-.area__heart {
-  flex: 0 0 20px;
-  position: relative;
-  color: #000;
-  right: 30px;
-}
-.area__bag {
-  flex: 0 0 20px;
-  position: relative;
-  color: #000;
-}
-.area__heart img {
-  max-width: 100%;
-  display: block;
-}
-.area__bag img {
-  max-width: 100%;
-  display: block;
-}
-.menu a {
-  text-decoration: none;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.menu a.parent {
-  margin: 0 25px 0 0;
 }
 
-.menu li {
-  position: relative;
-  list-style: none;
-}
-.menu__list {
-  display: flex;
-}
-
-.menu__list > li {
-  margin: 0px 20px 0px 0px;
-}
-
-.menu__link {
-  color: #000;
-}
-.sub-menu__list {
-  display: none;
-  min-width: 150px;
-  position: absolute;
-  left: 0;
-  top: 10px;
-  padding: 20px 0 0 0;
-}
-.sub-menu__list > li {
-  border-bottom: solid 2px rgb(86, 84, 84);
-  background: rgb(232, 230, 230);
-}
-.sub-menu__link {
-  color: rgb(86, 84, 84);
+.essence__btn {
   display: inline-block;
-  padding: 5px 10px;
+  min-width: 170px;
+  height: 50px;
+  color: #3e3e3e;
+  border: none;
+  border-radius: 0;
+  padding: 0 40px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 50px;
+  background-color: #e4d442;
+  border: rgb(255, 255, 255) solid 1px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  &:hover,
+  &:focus {
+    color: rgb(69, 51, 87);
+    background-color: rgb(242, 242, 242);
+    border: gray solid 1px;
+  }
 }
 
-.arrow {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 4px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid rgb(95, 94, 94);
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
+.bg__overlay {
+  position: relative;
+  z-index: 2;
+  background-position: center center;
+  background-size: cover;
+  &:hover {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
 }
-.menu__arrow {
-}
-.arrow.active {
-  transform: rotate(-180deg);
-}
-body.mouse .menu__list > li:hover .sub-menu__list {
-  display: block;
-}
-body.touch .sub-menu__list.open {
-  display: block;
-}
-body.touch .arrow {
-  display: block;
+.bg__overlay {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (max-width: 767px) {
-  .wrapper {
-    padding: 15px;
+  .welcome__area {
+    height: 100px;
   }
-  .header__area {
-    padding-top: 15px;
+  .hero__content h6 {
+    font-size: 10px;
+    margin-bottom: 5px;
   }
+  .hero__content h2 {
+    font-size: 20px;
+    color: rgb(10, 10, 10);
 
-  .menu {
-    display: flex;
-    flex-flow: wrap;
+    margin-bottom: 10px;
   }
-
-  .menu__list {
-    display: block;
+  .bg__img {
+    background-position: center;
   }
-  .menu__list > li {
-    margin: 0 0 5px 0;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    background-color: rgb(213, 227, 234);
-  }
-  .sub-menu__list > li {
-    border-bottom: solid 1px rgb(86, 84, 84);
-    background: rgb(255, 255, 255);
-    padding-right: 15px;
-  }
-  .header__logo {
-    position: relative;
-    order: 0;
-    flex: 0 0 110px;
-  }
-  .header__js {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    overflow: auto;
-    transition: all 0.3s ease 0s;
-    background-color: rgb(254, 254, 254);
-    padding: 80px 10px 20px 10px;
-  }
-  .header__js.active {
-    top: 0;
-  }
-  .sub-menu__list {
-    position: relative;
-    left: 0;
-    top: 0;
-  }
-
-  .area__heart {
-    flex: 0 0 25px;
-  }
-  .area__bag {
-    flex: 0 0 25px;
-  }
-  .favourite__area {
-    top: -40px;
-    order: 1;
-    left: 10px;
-  }
-
-  /**/
-  .header__burger {
-    display: block;
-    position: relative;
-    width: 25px;
-    height: 20px;
-    z-index: 3;
-    margin-left: 100px;
-  }
-  .header__burger span {
-    position: absolute;
-    background-color: rgb(95, 94, 94);
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 9px;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger:before,
-  .header__burger:after {
-    content: "";
-    background-color: rgb(95, 94, 94);
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger:before {
-    top: 0;
-  }
-  .header__burger:after {
-    bottom: 0;
-  }
-  .header__burger.active span {
-    transform: scale(0);
-  }
-  .header__burger.active:before {
-    transform: rotate(45deg);
-    top: 9px;
-  }
-  .header__burger.active:after {
-    transform: rotate(-45deg);
-    bottom: 9px;
+  .essence__btn {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 12px;
+    font-weight: 200;
   }
 }
