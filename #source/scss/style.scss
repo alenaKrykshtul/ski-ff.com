@@ -219,7 +219,6 @@ img {
     padding-bottom: 10px;
   }
   .row__area {
-    background-color: #000000;
     display: inline-block;
     width: 100%;
   }
@@ -233,5 +232,64 @@ img {
 
     top: 0px;
     left: 0px;
+  }
+}
+/* :: Sale Area CSS */
+.sale__area {
+  position: relative;
+  z-index: 1;
+  .sale__content {
+    width: 100%;
+    height: 400px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: 900;
+  }
+  h6 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+
+  .cta__text {
+    padding-right: 150px;
+  }
+}
+
+.h__100__sale {
+  height: 100%;
+  align-items: center;
+  display: flex;
+
+  justify-content: start;
+  padding-left: 35px;
+}
+.bg__img__sale {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .sale__text {
+    background-color: #ffffff;
+    padding-right: 25px;
+    text-align: start;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .sale__text h6 {
+    margin-bottom: 10px;
+  }
+  .sale__text h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .h__100__sale {
+    display: flex;
+    padding-left: 0;
+    padding-top: 205px;
   }
 }
